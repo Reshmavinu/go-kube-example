@@ -7,7 +7,7 @@ image:
   repository: reshmaannababu/go-kube-example
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "89d6b20"
+  tag: "c45c277"
 ingress:
   enabled: false
   className: ""
