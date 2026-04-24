@@ -112,7 +112,7 @@ jobs:
       # ✅ Use SAME tag from docker job
       - name: Update Helm (nonprod)
         run: |
-          yq e -i '.image.tag = "${{ needs.docker.outputs.image_tag }}"' helm/go-kube-example/values.yaml
+          yq e -i '.image.tag = "${{ needs.docker.outputs.image_tag }}"' helm/go-kube-example/vaules.yaml
 
       - name: Commit & push
         run: |
