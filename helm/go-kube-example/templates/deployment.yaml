@@ -17,6 +17,6 @@ spec:
     spec:
       containers:
       - name: go-kube-example
-        image: reshmaannababu/go-kube-example:v1
+        image: reshmaannababu/go-kube-example:{{ .Values.image.tag }}
         ports:
         - containerPort: 8080
