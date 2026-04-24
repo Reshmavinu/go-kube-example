@@ -1,0 +1,22 @@
+# This is a sample deployment manifest file for a simple web application.
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: go-kube-example
+  labels:
+    app: go-kube-example
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: go-kube-example
+  template:
+    metadata:
+      labels:
+        app: go-kube-example
+    spec:
+      containers:
+      - name: go-kube-example
+        image: reshmaannababu/go-kube-example:v1
+        ports:
+        - containerPort: 8080

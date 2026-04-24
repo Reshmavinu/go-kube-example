@@ -1,9 +1,8 @@
-# first version copied from
-# https://kubernetes.io/docs/concepts/workloads/controllers/deployment/
+# This is a sample deployment manifest file for a simple web application.
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: go-kube-example-deployment
+  name: go-kube-example
   labels:
     app: go-kube-example
 spec:
@@ -17,8 +16,7 @@ spec:
         app: go-kube-example
     spec:
       containers:
-        - name: go-kube-example
-          image: ko://github.com/guettli/go-kube-example # Modify the URL, if you forked the repo
-          args: ["--foobar"]
-          ports:
-            - containerPort: 8080
+      - name: go-kube-example
+        image: reshmaannababu/go-kube-example:v1
+        ports:
+        - containerPort: 8080

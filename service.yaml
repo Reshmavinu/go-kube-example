@@ -1,11 +1,15 @@
+# Service for the application
 apiVersion: v1
 kind: Service
 metadata:
-  name: go-kube-example-service
+  name: go-kube-example
   labels:
     app: go-kube-example
 spec:
   ports:
-    - port: 8080
+  - port: 80
+    targetPort: 8080
+    protocol: TCP
   selector:
     app: go-kube-example
+  type: NodePort
