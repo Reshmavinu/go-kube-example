@@ -3,11 +3,11 @@ WORKDIR /app
 COPY go.mod ./
 RUN go mod download
 COPY . .
-RUN go build -o reshmav .
+RUN go build -o reshma1 .
 
 ######################################
 FROM gcr.io/distroless/base
 WORKDIR /app
 COPY --from=base /app/reshmav .
 EXPOSE 8080
-CMD ["./reshmav"]
+CMD ["./reshma1"]
