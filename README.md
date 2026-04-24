@@ -1,4 +1,4 @@
-    # Example for deploying a simple Go application to Kubernetes
+    # Example for deploying a simple Go application to   Kubernetes
 
 Go source is in main.go. It is a simple http server which returns the http request headers.
 
