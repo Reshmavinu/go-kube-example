@@ -8,6 +8,6 @@ RUN go build -o reshma1 .
 ######################################
 FROM gcr.io/distroless/base
 WORKDIR /app
-COPY --from=base /app/reshmav .
+COPY --from=base /app/reshma1 .
 EXPOSE 8080
 CMD ["./reshma1"]
